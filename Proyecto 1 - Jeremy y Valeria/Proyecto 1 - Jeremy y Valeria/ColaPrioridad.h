@@ -8,7 +8,7 @@ struct Nodo {
 	Nodo* sig;
 	Nodo* anterior;
 	int valor;
-	Nodo(int v = 0, Nodo* n = nullptr, Nodo* a) : valor{ v }, sig{ n }, anterior{a} {}
+	Nodo(int v = 0, Nodo* n = nullptr, Nodo* a = nullptr) : valor{ v }, sig{ n }, anterior{a} {}
 };
 
 
@@ -38,9 +38,10 @@ private:
 	int GetHijoIzquierdo(int);
 	int GetHijoDerecho(int);
 	void Swap(int, int);
-	void MaxHeapify(int);
+	void Heapify(int);
+	int getValor(int i);
 	void SiftUp(int);
 	void ReasignarMemoria();
-	int pop(Nodo, )
+	//int pop(Nodo, )
 };
 #endif
