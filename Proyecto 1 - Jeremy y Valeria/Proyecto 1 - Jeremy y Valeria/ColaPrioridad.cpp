@@ -79,12 +79,43 @@ int ColaPrioridad::ExtraerMax() {
 	// Intercambia el elemento con mayor prioridad de la cola con el último
 	// y procede a realizar un bubble down para mantener la propiedad de heap
 	int conta = 0;
-	Nodo* tmp = tmp = inicio;
+	Nodo* tmp = inicio;
+	Nodo* tmp2 = tmp->sig;
+	Nodo* tmp3 = tmp;
+	int dato = tmp->valor;
+	int dato2 = 0;
+
+	while (tmp->sig != nullptr) {
+		tmp2 = tmp;
+		tmp = tmp->sig;
+		dato2 = tmp->valor;
+	}
+	tmp3->valor = dato2;
+	tmp2->sig = nullptr;
+	delete tmp;
+
+/*
+	int conta = 0;
+	Nodo* tmp  = inicio;
 	Nodo* tmp2 = tmp->sig;
 	//tmp->valor=	inicio->valor;	
 	int dato = 0;
 
 	while (tmp2->sig != nullptr) {
+
+		tmp = tmp2;
+		tmp2 = tmp2->sig;
+
+		dato = tmp2->valor;
+		
+	}
+	inicio->valor = dato;
+	tmp->sig = nullptr;
+
+	delete tmp2;
+
+
+/*	while (tmp2->sig != nullptr) {
 		if (tmp2->sig == nullptr) {
 			dato = tmp2->valor;
 			tmp->valor = dato;
@@ -183,8 +214,6 @@ int ColaPrioridad::GetHijoDerecho(int i) {
 		contador++;
 		tmp = tmp->sig;
 	}
-
-
 
 	/*if (i < 0 || i > tam)
 		return -1;
