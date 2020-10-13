@@ -1,6 +1,2 @@
-﻿  ColaPrioridad.cpp
-C:\Users\vtrejosc\OneDrive - Intel Corporation\Desktop\UNIVERSIDAD\Estructuras de Datos\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria\ColaPrioridad.cpp(182): warning C4715: 'ColaPrioridad::GetPadre': not all control paths return a value
-C:\Users\vtrejosc\OneDrive - Intel Corporation\Desktop\UNIVERSIDAD\Estructuras de Datos\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria\ColaPrioridad.cpp(204): warning C4715: 'ColaPrioridad::GetHijoIzquierdo': not all control paths return a value
-C:\Users\vtrejosc\OneDrive - Intel Corporation\Desktop\UNIVERSIDAD\Estructuras de Datos\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria\ColaPrioridad.cpp(225): warning C4715: 'ColaPrioridad::GetHijoDerecho': not all control paths return a value
-C:\Users\vtrejosc\OneDrive - Intel Corporation\Desktop\UNIVERSIDAD\Estructuras de Datos\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria\ColaPrioridad.cpp(295): warning C4715: 'ColaPrioridad::getValor': not all control paths return a value
+﻿  Proyecto 1 - Jeremy y Valeria.cpp
   Proyecto 1 - Jeremy y Valeria.vcxproj -> C:\Users\vtrejosc\OneDrive - Intel Corporation\Desktop\UNIVERSIDAD\Estructuras de Datos\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\x64\Debug\Proyecto 1 - Jeremy y Valeria.exe
