@@ -35,7 +35,7 @@ ColaPrioridad::~ColaPrioridad() {
 }
 
 void ColaPrioridad::Agregar(int val) {
-	int cont = 0;
+	
 
 	Nodo* nodo = new Nodo();
 	nodo->valor = val;
@@ -48,6 +48,8 @@ void ColaPrioridad::Agregar(int val) {
 		return;
 	}
 	else {
+		int cont = 1;
+
 		Nodo* tmp = inicio;
 		while (tmp->sig != nullptr) {
 			cont++;
@@ -81,18 +83,19 @@ int ColaPrioridad::ExtraerMax() {
 	int conta = 0;
 	Nodo* tmp = inicio;
 	Nodo* tmp2 = tmp->sig;
-	Nodo* tmp3 = tmp;
+//	Nodo* tmp3 = tmp;
 	int dato = tmp->valor;
 	int dato2 = 0;
 
-	while (tmp->sig != nullptr) {
-		tmp2 = tmp;
-		tmp = tmp->sig;
-		dato2 = tmp->valor;
+	while (tmp2->sig != nullptr) {
+		tmp = tmp2;
+		tmp2 = tmp2->sig;
+		
 	}
-	tmp3->valor = dato2;
-	tmp2->sig = nullptr;
-	delete tmp;
+	dato2 = tmp2->valor;
+	inicio->valor = dato2;
+	tmp->sig = nullptr; /**/
+	delete tmp2;
 
 /*
 	int conta = 0;
@@ -181,17 +184,21 @@ int ColaPrioridad::GetPadre(int i) {
 // Obtiene el índice del hijo izquierdo para la posición dada
 int ColaPrioridad::GetHijoIzquierdo(int i) {
 
-	int contador = 0;
+	int contador = 0;//((2*i)+1))
 
 	Nodo* tmp = inicio;
 
+
+	//Probar con for j=0, j<contador, j++
 	while (tmp != nullptr) {
 
-		if (contador == ((2*i)+1)) {
+		if (contador == ((2*i)+1)) {  //
 			return contador;
 		}
+
 		contador++;
 		tmp = tmp->sig;
+
 	}
 
 	/*if (i < 0 || i > tam)
