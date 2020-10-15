@@ -21,9 +21,15 @@
     <ClCompile Include="ColaPrioridad.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Emergencia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ColaPrioridad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Emergencia.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

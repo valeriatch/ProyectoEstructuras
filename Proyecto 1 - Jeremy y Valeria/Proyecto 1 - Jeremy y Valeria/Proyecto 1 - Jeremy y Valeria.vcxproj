@@ -140,10 +140,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ColaPrioridad.cpp" />
+    <ClCompile Include="Emergencia.cpp" />
     <ClCompile Include="Proyecto 1 - Jeremy y Valeria.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ColaPrioridad.h" />
+    <ClInclude Include="Emergencia.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

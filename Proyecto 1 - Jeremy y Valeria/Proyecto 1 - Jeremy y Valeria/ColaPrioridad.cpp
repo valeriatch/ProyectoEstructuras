@@ -1,25 +1,27 @@
-#include "ColaPrioridad.h"
+/*#include "ColaPrioridad.h"
 
 // Constructor a partir de un tamaño definido por el usuario
-ColaPrioridad::ColaPrioridad(){
+template<class T>
+ColaPrioridad<T>::ColaPrioridad(){
 	inicio = nullptr;
 }
 
 /*ColaPrioridad::ColaPrioridad() {
 
 
-}*/
+}
 
 // Constructor de copia
-ColaPrioridad::ColaPrioridad(ColaPrioridad& c) {
+template<class T>
+ColaPrioridad<T>::ColaPrioridad(ColaPrioridad& c) {
 	//cola = nullptr; 
 	if (c.inicio == nullptr) {
 		inicio = nullptr;
 	}
 	else {
 		inicio = new Nodo(c.inicio->valor);
-		Nodo* tmp = inicio;
-		Nodo* tmp_obj = c.inicio->sig;
+		Nodo<T>* tmp = inicio;
+		Nodo<T>* tmp_obj = c.inicio->sig;
 		while (tmp_obj != nullptr) {
 			tmp->sig = new Nodo(tmp_obj->valor);
 			tmp_obj->anterior = tmp;
@@ -30,14 +32,15 @@ ColaPrioridad::ColaPrioridad(ColaPrioridad& c) {
 }
 
 // Destructor - libera toda la memoria asignada a la cola de prioridad
-ColaPrioridad::~ColaPrioridad() {
+template<class T>
+ColaPrioridad<T>::~ColaPrioridad() {
 	delete[] inicio;
 }
 
-void ColaPrioridad::Agregar(int val) {
+template<class T>
+void ColaPrioridad<T>::Agregar(T val) {
 	
-
-	Nodo* nodo = new Nodo();
+	Nodo<T>* nodo = new Nodo<T>();
 	nodo->valor = val;
 	nodo->sig = nullptr;
 	//nodo->anterior = nullptr;
@@ -50,7 +53,7 @@ void ColaPrioridad::Agregar(int val) {
 	else {
 		int cont = 1;
 
-		Nodo* tmp = inicio;
+		Nodo<T>* tmp = inicio;
 		while (tmp->sig != nullptr) {
 			cont++;
 			tmp = tmp->sig;
@@ -65,7 +68,8 @@ void ColaPrioridad::Agregar(int val) {
 }
 
 // Retorna el valor con mayor prioridad de la cola
-int ColaPrioridad::GetMax() {
+template<class T>
+int ColaPrioridad<T>::GetMax() {
 	if (inicio != nullptr) {
 		return inicio ->valor;
 	}
@@ -73,7 +77,8 @@ int ColaPrioridad::GetMax() {
 }
 
 // Retorna el valor con mayor prioridad de la cola y lo elimina
-int ColaPrioridad::ExtraerMax() {
+template<class T>
+int ColaPrioridad<T>::ExtraerMax() {
 	if (inicio == nullptr) {
 		return -1;
 	}
@@ -81,11 +86,11 @@ int ColaPrioridad::ExtraerMax() {
 	// Intercambia el elemento con mayor prioridad de la cola con el último
 	// y procede a realizar un bubble down para mantener la propiedad de heap
 	int conta = 0;
-	Nodo* tmp = inicio;
-	Nodo* tmp2 = tmp->sig;
+	Nodo<T>* tmp = inicio;
+	Nodo<T>* tmp2 = tmp->sig;
 //	Nodo* tmp3 = tmp;
-	int dato = tmp->valor;
-	int dato2 = 0;
+	T dato = tmp->valor;
+	T dato2 = 0;
 
 	while (tmp2->sig != nullptr) {
 		tmp = tmp2;
@@ -94,51 +99,8 @@ int ColaPrioridad::ExtraerMax() {
 	}
 	dato2 = tmp2->valor;
 	inicio->valor = dato2;
-	tmp->sig = nullptr; /**/
+	tmp->sig = nullptr; /*
 	delete tmp2;
-
-/*
-	int conta = 0;
-	Nodo* tmp  = inicio;
-	Nodo* tmp2 = tmp->sig;
-	//tmp->valor=	inicio->valor;	
-	int dato = 0;
-
-	while (tmp2->sig != nullptr) {
-
-		tmp = tmp2;
-		tmp2 = tmp2->sig;
-
-		dato = tmp2->valor;
-		
-	}
-	inicio->valor = dato;
-	tmp->sig = nullptr;
-
-	delete tmp2;
-
-
-/*	while (tmp2->sig != nullptr) {
-		if (tmp2->sig == nullptr) {
-			dato = tmp2->valor;
-			tmp->valor = dato;
-		}
-		tmp = tmp2;
-		tmp2 = tmp2->sig;
-	}
-	delete tmp2;
-
-	/*while (tmp2) {
-		if (tmp->sig == nullptr) {
-			tmp2->valor = inicio->valor;
-			dato = tmp->valor;
-			inicio->valor = tmp->valor;
-			tmp->sig = tmp2->sig;
-			delete tmp2;			
-		}
-		tmp = tmp2->sig;
-		tmp2 = tmp2->sig;
-	}*/
 	
 	Heapify(0);
 	return dato;
@@ -156,14 +118,15 @@ int ColaPrioridad::ExtraerMax() {
 
 	SiftUp(i);
 }
-*/
+
 
 // Obtiene el índice del nodo padre para la posición dada
-int ColaPrioridad::GetPadre(int i) {
+template<class T>
+int ColaPrioridad<T>::GetPadre(int i) {
 
 	int contador =0;
 
-	Nodo* tmp = inicio;
+	Nodo<T>* tmp = inicio;
 
 	while (tmp!= nullptr) {
 		
@@ -178,19 +141,16 @@ int ColaPrioridad::GetPadre(int i) {
 /*	if (i < 0 || i > tam)
 		return -1;
 
-	return (i - 1) / 2;*/
+	return (i - 1) / 2;
 }
 
 // Obtiene el índice del hijo izquierdo para la posición dada
-int ColaPrioridad::GetHijoIzquierdo(int i) {
+template<class T>
+int ColaPrioridad<T>::GetHijoIzquierdo(int i) {
 
-	int contador = (2 * i) + 1;//((2*i)+1))
+	int contador = (2 * i) + 1;
 
-	Nodo* tmp = inicio;
-
-
-	//Probar con for j=0, j<contador, j++
-	// if tmp != nullptr
+	Nodo<T>* tmp = inicio;
 
 	for (int j = 0; j < contador; j++) {
 		if (tmp == nullptr) {
@@ -199,28 +159,16 @@ int ColaPrioridad::GetHijoIzquierdo(int i) {
 		tmp = tmp->sig;
 	}
 	return contador;
-	//while (tmp != nullptr) {
 
-	//	if (contador == ((2*i)+1)) {  //
-	//		return contador;
-	//	}
-
-	//	contador++;
-	//	tmp = tmp->sig;
-
-	//}
-
-	/*if (i < 0 || i > tam)
-		return -1;
-
-	return 2 * i + 1;*/
 }
 
 // Obtiene el índice del hijo derecho para la posición dada
-int ColaPrioridad::GetHijoDerecho(int i) {
+template<class T>
+int ColaPrioridad<T>::GetHijoDerecho(int i) {
+
 	int contador = (2 * i) + 2;
 
-	Nodo* tmp = inicio;
+	Nodo<T>* tmp = inicio;
 
 	for (int j = 0; j < contador; j++) {
 		if (tmp == nullptr) {
@@ -242,13 +190,14 @@ int ColaPrioridad::GetHijoDerecho(int i) {
 	/*if (i < 0 || i > tam)
 		return -1;
 
-	return 2 * i + 2;*/
+	return 2 * i + 2;
 }
 
 // Intercambia dos elementos de la cola
-void ColaPrioridad::Swap(int x, int y) {
-	Nodo* tmp = inicio;
-	Nodo *actualx = nullptr, * actualy = nullptr;
+template<class T>
+void ColaPrioridad<T>::Swap(int x, int y) {
+	Nodo<T>* tmp = inicio;
+	Nodo<T>* actualx = nullptr, * actualy = nullptr;
 
 	for (int i = 0; i <= x; i++) {
 		actualx = tmp;
@@ -260,19 +209,18 @@ void ColaPrioridad::Swap(int x, int y) {
 		tmp = tmp->sig;
 	}
 
-	int aux = actualx->valor;
+	T = actualx->valor;
 	actualx->valor = actualy->valor;
-	actualy->valor = aux;
+	actualy->valor = T;
 
-	/*int tmp = cola[x];
-	cola[x] = cola[y];
-	cola[y] = tmp;*/
+	
 }
 
 // Mantiene la propiedad de Heap - movimiento hacia abajo "bubble down - sift down"
 // Revisa que el nodo de la posición dada cumpla la propiedad de Heap. En caso contrario
 // Intercambia las llaves para mantener la propiedad de Max Heap
-void ColaPrioridad::Heapify(int i) {
+template<class T>
+void ColaPrioridad<T>::Heapify(int i) {
 	int izq = GetHijoIzquierdo(i);
 	int der = GetHijoDerecho(i);
 	int tmp = 0;
@@ -297,18 +245,18 @@ void ColaPrioridad::Heapify(int i) {
 		Heapify(tmp);
 	}
 }
-
-int ColaPrioridad::getValor(int i)
+template<class T>
+int ColaPrioridad<T>::getValor(int i)
 {
 	int contador = 0;
 
-	Nodo* tmp = inicio;
+	Nodo<T>* tmp = inicio;
 	int aux;
 
 	while (tmp != nullptr) {
 
 		if (contador == i) {
-			return aux = tmp->valor;
+			return aux = tmp->valor->getPrioridad();
 		}
 		contador++;
 		tmp = tmp->sig;
@@ -317,9 +265,10 @@ int ColaPrioridad::getValor(int i)
 
 // Intercambia una llave de mayor prioridad con su nodo padre
 // hasta que se mantenga la propiedad de Max Heap
-void ColaPrioridad::SiftUp(int i) {
+template<class T>
+void ColaPrioridad<T>::SiftUp(int i) {
 	int tmp = GetPadre(i);
-	Nodo* nodo = inicio;
+	Nodo<T>* nodo = inicio;
 	// Bubble up - sift up
 	while (nodo && getValor(tmp) < getValor(i)) {
 		Swap(i, tmp);
@@ -327,6 +276,37 @@ void ColaPrioridad::SiftUp(int i) {
 		tmp = GetPadre(i);
 	}
 }
+template<class T>
+int ColaPrioridad<T>::cantidad()
+{
+	int cant = 0;
+	Nodo<T>* tmp = inicio;
+	while (tmp != nullptr) {
+		tmp = tmp->sig;
+		cant++;
+	}
+	return cant;
+}
+template<class T>
+void ColaPrioridad<T>::CrearHeap()
+{
+	Nodo<T>* tmp = inicio;
+	int cant = (cantidad()/2 - 1);
+	for (int i = 0; cant >= i; i++) {
+		Heapify(i);
+		tmp = tmp->sig;
+	}
+}
+
+/*template<class T>
+void ColaPrioridad<T>::Iniciar()
+{
+	for (int i = 0; i < 10; i++) {
+		Agregar(T);
+	}
+}
+
+
 
 /*void ColaPrioridad::ReasignarMemoria() {
 	int* tmp = cola;
