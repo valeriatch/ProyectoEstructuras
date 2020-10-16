@@ -1,4 +1,5 @@
 ﻿  Proyecto 1 - Jeremy y Valeria.cpp
+<<<<<<< HEAD
 C:\Users\vtrejosc\OneDrive - Intel Corporation\Desktop\UNIVERSIDAD\Estructuras de Datos\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria\ColaPrioridad.h(110,4): error C2672: 'ColaPrioridad<Emergencia>::SiftUp': no matching overloaded function found
 C:\Users\vtrejosc\OneDrive - Intel Corporation\Desktop\UNIVERSIDAD\Estructuras de Datos\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria.cpp(16): message : see reference to function template instantiation 'void ColaPrioridad<Emergencia>::Agregar<Emergencia>(T)' being compiled
           with
@@ -12,3 +13,6 @@ C:\Users\vtrejosc\OneDrive - Intel Corporation\Desktop\UNIVERSIDAD\Estructuras d
           ]
 C:\Users\vtrejosc\OneDrive - Intel Corporation\Desktop\UNIVERSIDAD\Estructuras de Datos\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria\ColaPrioridad.h(110,1): error C2783: 'void ColaPrioridad<Emergencia>::SiftUp(int)': could not deduce template argument for 'T'
 C:\Users\vtrejosc\OneDrive - Intel Corporation\Desktop\UNIVERSIDAD\Estructuras de Datos\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria\ColaPrioridad.h(316): message : see declaration of 'ColaPrioridad<Emergencia>::SiftUp'
+=======
+  Proyecto 1 - Jeremy y Valeria.vcxproj -> C:\Users\vtrejosc\OneDrive - Intel Corporation\Desktop\UNIVERSIDAD\Estructuras de Datos\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\x64\Debug\Proyecto 1 - Jeremy y Valeria.exe
+>>>>>>> parent of 57fc4d9... arreglo de metodos
