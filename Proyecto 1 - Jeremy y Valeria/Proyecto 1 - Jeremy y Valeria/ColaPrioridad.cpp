@@ -151,8 +151,11 @@ int ColaPrioridad<T>::GetHijoIzquierdo(int i) {
 <<<<<<< HEAD
 	int contador = (2 * i) + 1;
 
+<<<<<<< HEAD
 	Nodo<T>* tmp = inicio;
 =======
+=======
+>>>>>>> parent of 57fc4d9... arreglo de metodos
 	int contador = 0;//((2*i)+1))
 
 	Nodo* tmp = inicio;
@@ -160,11 +163,15 @@ int ColaPrioridad<T>::GetHijoIzquierdo(int i) {
 
 	//Probar con for j=0, j<contador, j++
 	while (tmp != nullptr) {
+<<<<<<< HEAD
+>>>>>>> parent of 57fc4d9... arreglo de metodos
+=======
 >>>>>>> parent of 57fc4d9... arreglo de metodos
 
 		if (contador == ((2*i)+1)) {  //
 			return contador;
 		}
+<<<<<<< HEAD
 <<<<<<< HEAD
 		tmp = tmp->sig;
 	}
@@ -182,6 +189,12 @@ int ColaPrioridad<T>::GetHijoDerecho(int i) {
 		contador++;
 		tmp = tmp->sig;
 
+=======
+
+		contador++;
+		tmp = tmp->sig;
+
+>>>>>>> parent of 57fc4d9... arreglo de metodos
 	}
 
 	/*if (i < 0 || i > tam)
@@ -193,6 +206,9 @@ int ColaPrioridad<T>::GetHijoDerecho(int i) {
 // Obtiene el índice del hijo derecho para la posición dada
 int ColaPrioridad::GetHijoDerecho(int i) {
 	int contador = 0;
+<<<<<<< HEAD
+>>>>>>> parent of 57fc4d9... arreglo de metodos
+=======
 >>>>>>> parent of 57fc4d9... arreglo de metodos
 
 	Nodo<T>* tmp = inicio;
