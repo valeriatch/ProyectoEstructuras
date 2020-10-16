@@ -1,14 +1,7 @@
-﻿  Proyecto 1 - Jeremy y Valeria.cpp
-C:\Users\vtrejosc\OneDrive - Intel Corporation\Desktop\UNIVERSIDAD\Estructuras de Datos\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria\ColaPrioridad.h(110,4): error C2672: 'ColaPrioridad<Emergencia>::SiftUp': no matching overloaded function found
-C:\Users\vtrejosc\OneDrive - Intel Corporation\Desktop\UNIVERSIDAD\Estructuras de Datos\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria.cpp(16): message : see reference to function template instantiation 'void ColaPrioridad<Emergencia>::Agregar<Emergencia>(T)' being compiled
-          with
-          [
-              T=Emergencia
-          ]
-C:\Users\vtrejosc\OneDrive - Intel Corporation\Desktop\UNIVERSIDAD\Estructuras de Datos\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria.cpp(16): message : see reference to function template instantiation 'void ColaPrioridad<Emergencia>::Agregar<Emergencia>(T)' being compiled
-          with
-          [
-              T=Emergencia
-          ]
-C:\Users\vtrejosc\OneDrive - Intel Corporation\Desktop\UNIVERSIDAD\Estructuras de Datos\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria\ColaPrioridad.h(110,1): error C2783: 'void ColaPrioridad<Emergencia>::SiftUp(int)': could not deduce template argument for 'T'
-C:\Users\vtrejosc\OneDrive - Intel Corporation\Desktop\UNIVERSIDAD\Estructuras de Datos\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria\ColaPrioridad.h(316): message : see declaration of 'ColaPrioridad<Emergencia>::SiftUp'
+﻿  ColaPrioridad.cpp
+  Proyecto 1 - Jeremy y Valeria.cpp
+  Generando código...
+C:\Users\Jeremy\Desktop\Proyecto\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria\ColaPrioridad.cpp(182): warning C4715: 'ColaPrioridad::GetPadre': no todas las rutas de acceso de control devuelven un valor
+C:\Users\Jeremy\Desktop\Proyecto\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\Proyecto 1 - Jeremy y Valeria\ColaPrioridad.cpp(316): warning C4715: 'ColaPrioridad::getValor': no todas las rutas de acceso de control devuelven un valor
+  LINK : no se encontró C:\Users\Jeremy\Desktop\Proyecto\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\x64\Debug\Proyecto 1 - Jeremy y Valeria.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
+  Proyecto 1 - Jeremy y Valeria.vcxproj -> C:\Users\Jeremy\Desktop\Proyecto\ProyectoEstructuras\Proyecto 1 - Jeremy y Valeria\x64\Debug\Proyecto 1 - Jeremy y Valeria.exe
