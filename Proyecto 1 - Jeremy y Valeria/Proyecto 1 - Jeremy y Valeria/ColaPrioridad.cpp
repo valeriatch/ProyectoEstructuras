@@ -184,7 +184,6 @@ int ColaPrioridad::GetPadre(int i) {
 // Obtiene el índice del hijo izquierdo para la posición dada
 int ColaPrioridad::GetHijoIzquierdo(int i) {
 
-<<<<<<< HEAD
 	int contador = (2 * i) + 1;//((2*i)+1))
 
 	Nodo* tmp = inicio;
@@ -192,33 +191,11 @@ int ColaPrioridad::GetHijoIzquierdo(int i) {
 
 	//Probar con for j=0, j<contador, j++
 	// if tmp != nullptr
-=======
-<<<<<<< HEAD
-	int contador = (2 * i) + 1;
 
-<<<<<<< HEAD
-	Nodo<T>* tmp = inicio;
-=======
-=======
->>>>>>> parent of 57fc4d9... arreglo de metodos
-	int contador = 0;//((2*i)+1))
->>>>>>> 71eaf849330981cf507b776120c6c912629b8643
-
-	Nodo* tmp = inicio;
-
-
-	//Probar con for j=0, j<contador, j++
-	while (tmp != nullptr) {
-<<<<<<< HEAD
->>>>>>> parent of 57fc4d9... arreglo de metodos
-=======
->>>>>>> parent of 57fc4d9... arreglo de metodos
-
-		if (contador == ((2*i)+1)) {  //
-			return contador;
+	for (int j = 0; j < contador; j++) {
+		if (tmp == nullptr) {
+			return -1;
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
 		tmp = tmp->sig;
 	}
 	return contador;
@@ -242,47 +219,25 @@ int ColaPrioridad::GetHijoIzquierdo(int i) {
 // Obtiene el índice del hijo derecho para la posición dada
 int ColaPrioridad::GetHijoDerecho(int i) {
 	int contador = (2 * i) + 2;
-=======
 
-<<<<<<< HEAD
 	Nodo* tmp = inicio;
-=======
-		contador++;
+
+	for (int j = 0; j < contador; j++) {
+		if (tmp == nullptr) {
+			return -1;
+		}
 		tmp = tmp->sig;
->>>>>>> 71eaf849330981cf507b776120c6c912629b8643
-
-=======
-
-		contador++;
-		tmp = tmp->sig;
-
->>>>>>> parent of 57fc4d9... arreglo de metodos
 	}
+	return contador;
 
-	/*if (i < 0 || i > tam)
-		return -1;
-
-	return 2 * i + 1;*/
-}
-
-// Obtiene el índice del hijo derecho para la posición dada
-int ColaPrioridad::GetHijoDerecho(int i) {
-	int contador = 0;
-<<<<<<< HEAD
->>>>>>> parent of 57fc4d9... arreglo de metodos
-=======
->>>>>>> parent of 57fc4d9... arreglo de metodos
-
-	Nodo<T>* tmp = inicio;
-
-	while (tmp != nullptr) {
+	/*while (tmp != nullptr) {
 
 		if (contador == ((2*i)+2)) {
 			return contador;
 		}
 		contador++;
 		tmp = tmp->sig;
-	}
+	}*/
 
 	/*if (i < 0 || i > tam)
 		return -1;
@@ -323,14 +278,14 @@ void ColaPrioridad::Heapify(int i) {
 	int tmp = 0;
 	// Se comparan los hijos izquierdo y derecho con la posición dada
 	// y se almacena el índice mayor
-	if (inicio!= nullptr && getValor(izq) > getValor(i)) {
+	if (izq != -1 && getValor(izq) > getValor(i)) {
 		tmp = izq;
 	}
 	else {
 		tmp = i;
 	}
 
-	if (inicio != nullptr && getValor(der) > getValor(tmp)) {
+	if (der != -1 && getValor(der) > getValor(tmp)) {
 		tmp = der;
 	}
 	
