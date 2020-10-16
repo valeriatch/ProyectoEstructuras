@@ -148,14 +148,24 @@ int ColaPrioridad<T>::GetPadre(int i) {
 template<class T>
 int ColaPrioridad<T>::GetHijoIzquierdo(int i) {
 
+<<<<<<< HEAD
 	int contador = (2 * i) + 1;
 
 	Nodo<T>* tmp = inicio;
+=======
+	int contador = 0;//((2*i)+1))
 
-	for (int j = 0; j < contador; j++) {
-		if (tmp == nullptr) {
-			return -1;
+	Nodo* tmp = inicio;
+
+
+	//Probar con for j=0, j<contador, j++
+	while (tmp != nullptr) {
+>>>>>>> parent of 57fc4d9... arreglo de metodos
+
+		if (contador == ((2*i)+1)) {  //
+			return contador;
 		}
+<<<<<<< HEAD
 		tmp = tmp->sig;
 	}
 	return contador;
@@ -167,25 +177,34 @@ template<class T>
 int ColaPrioridad<T>::GetHijoDerecho(int i) {
 
 	int contador = (2 * i) + 2;
+=======
+
+		contador++;
+		tmp = tmp->sig;
+
+	}
+
+	/*if (i < 0 || i > tam)
+		return -1;
+
+	return 2 * i + 1;*/
+}
+
+// Obtiene el índice del hijo derecho para la posición dada
+int ColaPrioridad::GetHijoDerecho(int i) {
+	int contador = 0;
+>>>>>>> parent of 57fc4d9... arreglo de metodos
 
 	Nodo<T>* tmp = inicio;
 
-	for (int j = 0; j < contador; j++) {
-		if (tmp == nullptr) {
-			return -1;
-		}
-		tmp = tmp->sig;
-	}
-	return contador;
-
-	/*while (tmp != nullptr) {
+	while (tmp != nullptr) {
 
 		if (contador == ((2*i)+2)) {
 			return contador;
 		}
 		contador++;
 		tmp = tmp->sig;
-	}*/
+	}
 
 	/*if (i < 0 || i > tam)
 		return -1;
@@ -226,14 +245,14 @@ void ColaPrioridad<T>::Heapify(int i) {
 	int tmp = 0;
 	// Se comparan los hijos izquierdo y derecho con la posición dada
 	// y se almacena el índice mayor
-	if (izq != -1 && getValor(izq) > getValor(i)) {
+	if (inicio!= nullptr && getValor(izq) > getValor(i)) {
 		tmp = izq;
 	}
 	else {
 		tmp = i;
 	}
 
-	if (der != -1 && getValor(der) > getValor(tmp)) {
+	if (inicio != nullptr && getValor(der) > getValor(tmp)) {
 		tmp = der;
 	}
 	
